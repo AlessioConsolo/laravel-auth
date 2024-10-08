@@ -5,11 +5,10 @@
 
     <p>{{ $project->description }}</p>
 
-    @if ($project->image)
-        <div>
-            <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
-        </div>
+    @if ($project->cover_image)
+    <img src="{{ asset('storage/' . $project->cover_image) }}" alt="{{ $project->name }}" style="max-width: 300px;">
     @endif
+
 
     <a href="{{ route('admin.projects.index') }}">Torna all'elenco progetti</a>
 @endsection
